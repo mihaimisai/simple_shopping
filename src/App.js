@@ -1,17 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react"; 
+import Header from "./components/Header"
+import 'bootstrap/dist/css/bootstrap.css';
+import Form from "./components/Form";
+import List from "./components/List"
 
 function App() {
+
+  const [items, setItems] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Te iubesc mami!  &lt; 3
-        </p>
-      </header>
-    </div>
+    <main className="container">
+      <div className="row pt-5 d-flex text-center my-5 justify-content-center">
+        <Header />
+        <Form items={items} setItems={setItems} />
+        <List items={items} setItems={setItems} />
+      </div>
+    </main>
   );
 }
 
-export default App;
+export default App
