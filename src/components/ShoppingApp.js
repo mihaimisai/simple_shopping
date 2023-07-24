@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ShoppingList from './ShoppingList';
 import AddItemForm from './AddItemForm';
+import RefreshButton from './RefreshButton'
 
 const ShoppingApp = () => {
   const [items, setItems] = useState([]);
@@ -49,6 +50,7 @@ const ShoppingApp = () => {
   return (
     <div className="container">
       <AddItemForm onAdd={addItem} />
+      <RefreshButton />
       <ShoppingList items={items} onDelete={deleteItem} />
     </div>
   );
