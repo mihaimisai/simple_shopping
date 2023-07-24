@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/data"
+  to = "https://simpleshoppingserver.mihaimisai.repl.co/data"
+  status = 200
