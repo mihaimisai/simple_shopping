@@ -24,6 +24,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "https://simpleshoppingserver.mihaimisai.repl.co",
   "browserslist": {
     "production": [
       ">0.2%",
