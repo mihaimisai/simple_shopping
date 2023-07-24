@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/data"
-  to = "https://simpleshoppingserver.mihaimisai.repl.co/data"
+  from = "/*"
+  to = "https://simpleshoppingserver.mihaimisai.repl.co/:splat"
   status = 200
