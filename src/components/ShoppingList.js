@@ -9,7 +9,7 @@ function ShoppingList({items, onDelete}) {
 
     return (
         <div className='d-flex justify-content-center align-items-center'>
-            <ul className='list-group list-unstyled my-5 w-25'>
+            <ul className='list-group list-unstyled my-5'>
                 {itemList.map((item) => (
                     <ShoppingItem key={item._id} item={item} onDelete={onDelete} />
                 ))}
