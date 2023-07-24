@@ -16,8 +16,9 @@ const AddItemForm = ({ onAdd }) => {
         type="text"
         value={itemName}
         onChange={(e) => setItemName(e.target.value)}
+        autoFocus
       />
-      <button type="submit">Add Item</button>
+      <button type="submit" className='btn btn-primary mx-2'>Add Item</button>
     </form>
   );
 };

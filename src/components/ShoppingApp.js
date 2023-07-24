@@ -48,8 +48,8 @@ const ShoppingApp = () => {
 
   return (
     <div className="container">
-      <ShoppingList items={items} onDelete={deleteItem} />
       <AddItemForm onAdd={addItem} />
+      <ShoppingList items={items} onDelete={deleteItem} />
     </div>
   );
 };

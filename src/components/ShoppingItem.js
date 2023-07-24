@@ -7,9 +7,9 @@ const ShoppingItem = ({ item, onDelete }) => {
   }
 
   return (
-    <li>
+    <li className='list-group-item list-group-item-dark'>
       <span>{item.name}</span>
-      <button className='btn btn-danger m-2' onClick={handleDelete}>Delete</button>
+      <button className='btn btn-danger m-2' onClick={handleDelete}>x</button>
     </li>
   );
 };
