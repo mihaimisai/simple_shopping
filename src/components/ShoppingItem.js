@@ -1,14 +1,14 @@
 import React from 'react';
 
-const ShoppingItem = ({ item, onDelete }) => {
+const ShoppingItem = ({ item }) => {
 
   const handleDelete = () => {
-    onDelete(item._id)
+    console.log('attempting to delete item')
   }
 
   return (
     <li className='list-group-item list-group-item-dark'>
-      <span>{item.name}</span>
+      <span>{item}</span>
       <button className='btn btn-danger m-2' onClick={handleDelete}>x</button>
     </li>
   );

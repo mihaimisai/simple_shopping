@@ -13,21 +13,31 @@ function LoginForm() {
             return;
           }
 
-        try {
+          try {
             const user = {
-                'userOrMail': userOrMail,
-                'password': password
-            }
-            await fetch('/login', {
-              method: 'POST',
+              'userOrMail': userOrMail,
+              'password': password
+            };
+            const response = await fetch("/login", {
+              method: "POST",
               headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
               },
-              body: JSON.stringify({ user: user})
-            })
+              body: JSON.stringify({ user: user }),
+            });
+          
+            if (response.ok) {
+              window.location.reload()
+            } else if (response.status === 401) {
+              setErrorMessage("Invalid username or password");
+            } else {
+              console.error('Error checking user:', response.statusText);
+            }
+          
           } catch (error) {
             console.error('Error checking user:', error);
-          } 
+          }
+          
     }
         
 

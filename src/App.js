@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ShoppingApp from './components/ShoppingApp';
 import LoginApp from "./components/LoginApp";
 import { useEffect, useState } from "react";
+import LogoutButton from "./components/LogoutButton";
 
 function App() {
 
@@ -23,17 +24,21 @@ function App() {
           })
   }
 
- 
-
   return (
     <div className="App">
       <div className="row d-flex text-center my-5 justify-content-center">
       <Header />
       {
         isLogged ? 
-        <ShoppingApp /> : 
+        <>
+          <ShoppingApp /> 
+          <LogoutButton />
+        </>
+        : 
         <LoginApp />
+        
       }
+      
       </div>
     </div>
   );

@@ -16,30 +16,44 @@ const ShoppingApp = () => {
             if(response.ok) {
                 return response.json()
             }
-        }).then(data=>setItems(data))
+        }).then(data=>{
+          console.log(data)
+          setItems(data)
+        })
   }
-
+  
   const addItem = async (itemName) => {
+    console.log('Adding item:', itemName);
     try {
-      await fetch('/add_data', {
+      const response = await fetch('/add_data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name: itemName })
-      })
+        body: JSON.stringify({ itemName })
+      });
   
-      fetchItems()
+      if (response.ok) {
+        // Item added successfully, fetch the updated items list
+        fetchItems();
+      } else {
+        // Handle the case where the server returned an error
+        console.error('Error adding item:', response.statusText);
+      }
     } catch (error) {
+      // Handle any network-related errors
       console.error('Error adding item:', error);
     }
   }
     
 
-  const deleteItem = async (id) => {
+  const deleteItem = async (item) => {
     try {
-      await fetch(`/delete/${id}`, {
-        method: 'DELETE'
+      await fetch(`/delete/${item}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        }
       })
       fetchItems()
     } catch (error) {

@@ -27,13 +27,16 @@ function SignUpForm() {
                 'password': password,
                 'items': []
             }
-            await fetch('/register', {
+              await fetch('/register', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({ user: newUser})
             })
+            
+            window.location.reload()
+
           } catch (error) {
             console.error('Error adding item:', error);
           }
