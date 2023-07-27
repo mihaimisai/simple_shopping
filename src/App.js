@@ -32,7 +32,6 @@ function App() {
         isLogged ? 
         <>
           <ShoppingApp /> 
-          <LogoutButton />
         </>
         : 
         <LoginApp />

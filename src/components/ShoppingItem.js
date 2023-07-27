@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ShoppingItem = ({ item }) => {
+const ShoppingItem = ({ item, onDelete }) => {
 
   const handleDelete = () => {
-    console.log('attempting to delete item')
+    onDelete(item)
   }
 
   return (
