@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ShoppingApp from './components/ShoppingApp';
 import LoginApp from "./components/LoginApp";
 import { useEffect, useState } from "react";
-import LogoutButton from "./components/LogoutButton";
 
 function App() {
 
