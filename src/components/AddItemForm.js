@@ -6,7 +6,7 @@ const AddItemForm = ({ onAdd }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (itemName.trim() === '') return;
-    onAdd(itemName);
+    onAdd(itemName.toLowerCase());
     setItemName('');
   };
 
