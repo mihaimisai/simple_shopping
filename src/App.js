@@ -4,6 +4,7 @@ import ShoppingApp from './components/ShoppingApp';
 import LoginApp from "./components/LoginApp";
 import { useEffect, useState } from "react";
 
+
 function App() {
 
   const [isLogged, setIsLogged] = useState(false)
@@ -36,7 +37,6 @@ function App() {
         <LoginApp />
         
       }
-      
       </div>
     </div>
   );
