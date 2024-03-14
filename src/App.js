@@ -14,7 +14,7 @@ function App() {
   }, [])
 
   const fetchLogged = () => {
-    fetch('/check_login_status')
+    fetch('https://replit.com/@MihaiMisai/simpleshoppingserver#app.pycheck_login_status')
         .then(response => {
             if(response.ok) {
                 return response.json()
